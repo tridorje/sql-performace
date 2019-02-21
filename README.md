@@ -1,8 +1,10 @@
 # sql-performace
 explain about sql performace
 
+
 each folder have 2 file
 LinkResource.txt : link of database example, link of powerpoint explaination
+
 example.sql file
 Lesson 1 cover about:
 
