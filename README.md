@@ -6,7 +6,7 @@ each folder have 2 file
 LinkResource.txt : link of database example, link of powerpoint explaination
 
 example.sql file
-Lesson 1 cover about:
+# Lesson 1 cover about:
 
 about index in general, how to use sql tunning tool, profiler tool, correct way to write sql query to reuse excution plan
 
@@ -18,7 +18,7 @@ powerpoint
 
 https://docs.google.com/presentation/d/1nsLLhiIG0kh3h0f08BFEWG2Uz56R3oFvO9rFU0v7JQY/edit?usp=sharing
 
-Lesson 2 cover about:
+# Lesson 2 cover about:
 
 cluster index, noncluster index, cover index, composite index, sargable where codition
 
