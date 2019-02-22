@@ -14,6 +14,8 @@ about index in general, how to use sql tunning tool, profiler tool, correct way 
 Lesson 1 will reupdate content soon (will be better :] )
 
 
+powerpoint
+
 https://docs.google.com/presentation/d/1nsLLhiIG0kh3h0f08BFEWG2Uz56R3oFvO9rFU0v7JQY/edit?usp=sharing
 
 Lesson 2 cover about:
