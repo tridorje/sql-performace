@@ -9,7 +9,12 @@ example.sql file
 Lesson 1 cover about:
 
 about index in general, how to use sql tunning tool, profiler tool, correct way to write sql query to reuse excution plan
-Lesson 1 will reupdate soon
+
+
+Lesson 1 will reupdate content soon (will be better :] )
+
+
+https://docs.google.com/presentation/d/1nsLLhiIG0kh3h0f08BFEWG2Uz56R3oFvO9rFU0v7JQY/edit?usp=sharing
 
 Lesson 2 cover about:
 
