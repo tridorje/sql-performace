@@ -31,3 +31,6 @@ powerpoint
 
 https://docs.google.com/presentation/d/1k0I7-7RMNXrS8PCxAwgibgbw26OPJfC9O1JTqGOWrN0/edit?usp=sharing
 
+# Lesson 3 cover about:
+
+partition table
