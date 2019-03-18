@@ -34,3 +34,8 @@ https://docs.google.com/presentation/d/1k0I7-7RMNXrS8PCxAwgibgbw26OPJfC9O1JTqGOW
 # Lesson 3 cover about:
 
 partition table
+
+# Lesson 4 cover about:
+General about Entity framework core
+Dependency Injection
+Program structure
