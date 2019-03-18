@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Global.Utilities\Global.Utilities.csproj" />
+    <ProjectReference Include="..\Global.Infrastructure\Global.Infrastructure.csproj" />
+    <ProjectReference Include="..\Project.Data\Project.Data.csproj" />
+    <ProjectReference Include="..\Project.Dat\Project.Data.EF.csproj" />
+  </ItemGroup>
+
+</Project>
