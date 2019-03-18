@@ -37,5 +37,8 @@ partition table
 
 # Lesson 4 cover about:
 General about Entity framework core
+
 Dependency Injection
+
 Program structure
+
