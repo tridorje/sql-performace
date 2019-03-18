@@ -31,10 +31,12 @@ namespace YayoiApp.Data.EF
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
+            //map table to model
             builder.Entity<TestTable>().ToTable("TestTable")
                .HasKey(x => new { x.Id });
 
-            
+            //many to many configuration
             builder.Entity<Test1Test2>().ToTable("Test1Test2")
                 .HasKey(x => new { x.TestTable1Id, x.TestTable2Id });
 
