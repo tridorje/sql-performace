@@ -65,7 +65,7 @@ namespace Project.Application.Implementation
             //throw new NotImplementedException();
             var testTable = _testTableRepository.FindById(id);
 
-           
+            
 
             var rs = _mapper.Map<TestTable, TestTableModel>(testTable);
 
