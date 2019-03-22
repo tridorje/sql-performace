@@ -43,19 +43,19 @@ namespace WindowsFormsApp1
             var temp = _testTableService.GetById(1);
 
 
-            //var newTest = new TestTableModel()
-            //{
-            //    ID = 7,
-            //    name = "Le tri",
-            //    value = 3333
-            //};
+            var newTest = new TestTableModel()
+            {
+                ID = 999,
+                name = "Le tri",
+                value = 3333
+            };
 
-            //_testTableService.Add(newTest);
-            //_testTableService.Save();
+            _testTableService.Add(newTest);
+            _testTableService.Save();
 
-            var temp1 = _testTableService.GetById(3);
+            var temp1 = _testTableService.GetById(999);
 
-            var aesStr = _yayoiCryptor.EncryptData(_rawString, "1234567812345678");
+            var aesStr = _yayoiCryptor.EncryptData(_rawString, "12345678");
             textBox2.Text = aesStr;
 
 

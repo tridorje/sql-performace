@@ -18,8 +18,7 @@ namespace WindowsFormsApp1
     public partial class UsingInterfaceClassForm : Form
     {
         private readonly IYayoiCryptor _yayoiCryptor;
-        private readonly IYayoiCryptor _yayoiCryptor2;
-        private readonly IYayoiCryptor _yayoiCryptor3;
+        
 
 
         private string _rawString;
@@ -29,9 +28,9 @@ namespace WindowsFormsApp1
 
             var memoryCache = new MemoryCacheService(new MemoryCacheOptions());
 
-            _yayoiCryptor = new AESUtils(memoryCache);
+            //_yayoiCryptor = new AESUtils(memoryCache);
 
-            //_yayoiCryptor = new DES(memoryCache);
+            _yayoiCryptor = new DES(memoryCache);
 
 
             InitializeComponent();

@@ -10,12 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YayoiApp.Utilities.SecurityFunc.AES;
+using YayoiApp.Utilities.SecurityFunc.DES;
 
 namespace WindowsFormsApp1
 {
     public partial class NotUseAnything2 : Form
     {
-        private readonly AESUtils _yayoiCryptor;
+        private readonly DES _yayoiCryptor;
         private readonly AESUtils _yayoiCryptor2;
         private readonly AESUtils _yayoiCryptor3;
 
@@ -26,7 +27,7 @@ namespace WindowsFormsApp1
         {
 
             var memoryCache = new MemoryCacheService(new MemoryCacheOptions());
-            _yayoiCryptor = new AESUtils(memoryCache);
+            _yayoiCryptor = new DES(memoryCache);
 
 
             InitializeComponent();
