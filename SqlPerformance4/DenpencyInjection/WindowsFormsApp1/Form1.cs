@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using YayoiApp.Utilities.SecurityFunc;
 using Unity;
+using Project.Dat.IRepositories;
+using Project.Data.Entities;
 
 namespace WindowsFormsApp1
 {
@@ -22,14 +24,23 @@ namespace WindowsFormsApp1
         private string _rawString;
 
         private readonly ITestTableService _testTableService;
-
+        private readonly IBoilEggTableRepository _boilEggTableRepository;
+        private readonly IMohingaService _mohingaService;
+        
 
         public Form1(
+            IBoilEggTableRepository boilEggTableRepository,
             IYayoiCryptor yayoiCryptor,
-            ITestTableService testTableService) : this()
+            ITestTableService testTableService,
+            IMohingaService mohingaService) : this()
         {
 
+            _mohingaService = mohingaService;
+
+            _boilEggTableRepository = boilEggTableRepository;
+
             _testTableService = testTableService;
+
             _yayoiCryptor = yayoiCryptor;
         }
 
@@ -38,25 +49,31 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            var temp = _testTableService.GetById(1);
+
+            var mohingaViewModels = await _mohingaService.MakeMohinga();
 
 
-            var newTest = new TestTableModel()
-            {
-                ID = 999,
-                name = "Le tri",
-                value = 3333
-            };
 
-            _testTableService.Add(newTest);
-            _testTableService.Save();
 
-            var temp1 = _testTableService.GetById(999);
+            //var temp = _testTableService.GetById(1);
 
-            var aesStr = _yayoiCryptor.EncryptData(_rawString, "12345678");
-            textBox2.Text = aesStr;
+
+            //var newTest = new TestTableModel()
+            //{
+            //    ID = 999,
+            //    name = "Le tri",
+            //    value = 3333
+            //};
+
+            //_testTableService.Add(newTest);
+            //_testTableService.Save();
+
+            //var temp1 = _testTableService.GetById(999);
+
+            //var aesStr = _yayoiCryptor.EncryptData(_rawString, "12345678");
+            //textBox2.Text = aesStr;
 
 
 

@@ -46,7 +46,9 @@ namespace YayoiApp.Data.EF
         public DbSet<TestTable1> TestTable1 { get; set; }
         public DbSet<TestTable2> TestTable2 { get; set; }
         public DbSet<Test1Test2> Test1Test2 { get; set; }
+        public DbSet<EggTable> EggTable { get; set; }
         
+
     }
    
 

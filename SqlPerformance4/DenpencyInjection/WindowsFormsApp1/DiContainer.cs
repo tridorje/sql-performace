@@ -3,6 +3,8 @@ using Hr32bit;
 using Microsoft.Extensions.Caching.Memory;
 using Project.Application.Implementation;
 using Project.Application.Interfaces;
+using Project.Dat.IRepositories;
+using Project.Dat.Repositories;
 using Project.Data.EF;
 using Project.Data.IRepositories;
 using System;
@@ -42,8 +44,13 @@ namespace DepencyInjectionTest
 
 
             currentContainer.RegisterType<ITestTableRepository, TestTableRepository>();
-            currentContainer.RegisterType<ITestTableService, TestTableService>();
 
+            currentContainer.RegisterType<IBoilEggTableRepository, BoilEggTableRepository>();
+            currentContainer.RegisterType<IMohingaService, MohingaService>();
+            
+
+            //currentContainer.RegisterType<ITestTableService, TestTableService>();
+            currentContainer.RegisterType<ITestTableService, TestTableService1>();
             currentContainer.RegisterType<IYayoiCryptor, AESUtils>();
 
             //currentContainer.RegisterType<IYayoiCryptor, DES>();
