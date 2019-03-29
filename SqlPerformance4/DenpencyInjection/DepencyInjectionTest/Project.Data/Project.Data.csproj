@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\EggTable.cs" />
+    <Compile Include="Entities\NoddleTable.cs" />
     <Compile Include="Entities\Test1Test2.cs" />
     <Compile Include="Entities\TestTable.cs" />
     <Compile Include="Entities\TestTable1.cs" />

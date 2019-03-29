@@ -149,6 +149,7 @@
     <Compile Include="EFUnitOfWork.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="IRepositories\IBoilEggTableRepository.cs" />
+    <Compile Include="IRepositories\IBoilNoddleTableRepository.cs" />
     <Compile Include="IRepositories\ITestTableRepository.cs" />
     <Compile Include="Migrations\20190318024710_Inital.cs" />
     <Compile Include="Migrations\20190318024710_Inital.designer.cs">
@@ -166,9 +167,14 @@
     <Compile Include="Migrations\20190329042635_AddEggTable.designer.cs">
       <DependentUpon>20190329042635_AddEggTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190329082253_AddNoddleTable.cs" />
+    <Compile Include="Migrations\20190329082253_AddNoddleTable.designer.cs">
+      <DependentUpon>20190329082253_AddNoddleTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BoilEggTableRepository.cs" />
+    <Compile Include="Repositories\BoilNoddleTableRepository.cs" />
     <Compile Include="Repositories\TestTableRepository.cs" />
     <Compile Include="Repositories\UserRepository_callSqlDirectly_Example.cs" />
   </ItemGroup>

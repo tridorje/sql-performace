@@ -45,6 +45,8 @@ namespace DepencyInjectionTest
 
             currentContainer.RegisterType<ITestTableRepository, TestTableRepository>();
 
+            
+            currentContainer.RegisterType<IBoilNoddleTableRepository, BoilNoddleTableRepository>();
             currentContainer.RegisterType<IBoilEggTableRepository, BoilEggTableRepository>();
             currentContainer.RegisterType<IMohingaService, MohingaService>();
             

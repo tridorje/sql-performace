@@ -15,12 +15,17 @@ namespace Project.Application.Implementation
     {
 
         private readonly IBoilEggTableRepository _boilEggTableRepository;
+        private readonly IBoilNoddleTableRepository _boilNoddleTableRepository;
 
+        
 
-        public MohingaService(IBoilEggTableRepository boilEggTableRepository)
+        public MohingaService(
+            IBoilEggTableRepository boilEggTableRepository,
+            IBoilNoddleTableRepository boilNoddleTableRepository)
         {
 
             _boilEggTableRepository = boilEggTableRepository;
+            _boilNoddleTableRepository = boilNoddleTableRepository;
         }
 
         public void Dispose()
@@ -37,6 +42,15 @@ namespace Project.Application.Implementation
             };
             _boilEggTableRepository.Add(egg);
 
+            var noddleTable = new NoddleTable()
+            {
+                noddleName = "7 eleven",
+                value = 1
+            };
+
+
+            _boilNoddleTableRepository.Add(noddleTable);
+
             Save();
 
 
@@ -44,12 +58,12 @@ namespace Project.Application.Implementation
             
 
             var temp = await (from eggs in _boilEggTableRepository.FindAll()
-
+                        join noddle in _boilNoddleTableRepository.FindAll() on eggs.Id equals noddle.Id
                        select new MohingaViewModel()
                        {
                            ID = eggs.Id,
                            eggStr = eggs.name,
-                           noddleStr = ""
+                           noddleStr = noddle.noddleName
                        }).ToListAsync();
 
 
@@ -60,6 +74,7 @@ namespace Project.Application.Implementation
         public void Save()
         {
             _boilEggTableRepository.Commit();
+            _boilNoddleTableRepository.Commit();
         }
     }
 }

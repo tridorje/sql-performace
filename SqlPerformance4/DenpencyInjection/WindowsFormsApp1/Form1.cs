@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
         {
 
             var mohingaViewModels = await _mohingaService.MakeMohinga();
-
+            var mohingaViewModels1 = await _mohingaService.MakeMohinga();
 
 
 
