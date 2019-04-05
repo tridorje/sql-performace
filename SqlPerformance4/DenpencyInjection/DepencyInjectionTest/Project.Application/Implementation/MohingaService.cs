@@ -48,14 +48,9 @@ namespace Project.Application.Implementation
                 value = 1
             };
 
-
             _boilNoddleTableRepository.Add(noddleTable);
 
             Save();
-
-
-
-            
 
             var temp = await (from eggs in _boilEggTableRepository.FindAll()
                         join noddle in _boilNoddleTableRepository.FindAll() on eggs.Id equals noddle.Id
@@ -65,8 +60,6 @@ namespace Project.Application.Implementation
                            eggStr = eggs.name,
                            noddleStr = noddle.noddleName
                        }).ToListAsync();
-
-
 
             return temp.ToList();
         }
