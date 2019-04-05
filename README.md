@@ -42,3 +42,8 @@ Dependency Injection
 
 Program structure
 
+
+# Lesson 5 cover about:
+
+
+sql performance tunning overview
